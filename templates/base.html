@@ -5,94 +5,285 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>EcoLearn</title>
     <link rel="stylesheet" href="/static/style.css" />
-
+    
     <style>
-      /* Chatbox hidden by default */
+      /* ---------------- Base Styles ---------------- */
+      body {
+        font-family: 'Inter', system-ui, Arial, sans-serif;
+        margin: 0;
+        background: #f6faf5;
+        color: #0b2e13;
+        line-height: 1.5;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        margin: 0 0 12px 0;
+        font-weight: 600;
+      }
+
+      p {
+        margin: 0 0 12px 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* ---------------- Header ---------------- */
+      .site-header {
+        background: #0f5132;
+        color: white;
+        padding: 16px 24px;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      }
+
+      /* ---------------- Main container ---------------- */
+      .container {
+        max-width: 900px;
+        margin: 24px auto;
+        padding: 0 16px;
+      }
+
+      /* ---------------- Lessons Grid ---------------- */
+      .lessons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+      }
+
+      /* ---------------- Lesson Card ---------------- */
+      .lesson-card {
+        background: white;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(10,30,10,0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .lesson-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(10,30,10,0.12);
+      }
+
+      /* ---------------- Buttons ---------------- */
+      .btn {
+        background: #0f5132;
+        color: white;
+        padding: 8px 14px;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 500;
+        transition: background 0.2s ease;
+      }
+
+      .btn:hover {
+        background: #0d4328;
+      }
+
+      .btn-outline {
+        border: 1px solid #0f5132;
+        color: #0f5132;
+        padding: 8px 14px;
+        border-radius: 8px;
+        text-decoration: none;
+        background: transparent;
+        font-weight: 500;
+        transition: background 0.2s ease, color 0.2s ease;
+      }
+
+      .btn-outline:hover {
+        background: #0f5132;
+        color: white;
+      }
+
+      /* ---------------- Lesson / Quiz Page ---------------- */
+      .lesson-full,
+      .quiz-page {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(10,30,10,0.08);
+        margin-bottom: 24px;
+      }
+
+      .lesson-section {
+        margin-bottom: 16px;
+      }
+
+      /* ---------------- Activity Box ---------------- */
+      .activity {
+        background: #f3fff3;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 12px;
+        font-size: 0.95rem;
+        line-height: 1.4;
+      }
+
+      /* ---------------- Meta Text ---------------- */
+      .meta {
+        color: rgba(15,81,50,0.6);
+        font-size: 0.85rem;
+      }
+
+      /* ---------------- Quiz ---------------- */
+      .qa {
+        margin-bottom: 16px;
+      }
+
+      label {
+        cursor: pointer;
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .quiz-actions {
+        margin-top: 12px;
+      }
+
+      /* ---------------- Result Box ---------------- */
+      .result {
+        margin-top: 14px;
+        padding: 12px;
+        border-radius: 10px;
+        background: #eef8ee;
+        font-size: 0.95rem;
+      }
+
+      /* ---------------- Chatbox ---------------- */
       .chatbox {
         display: none;
         position: fixed;
         right: 20px;
         bottom: 80px;
-        width: 300px;
-        height: 400px;
-        border-radius: 10px;
+        width: 320px;
+        max-width: 90%;
+        height: 420px;
+        border-radius: 14px;
         background: #ffffff;
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        box-shadow: 0 12px 28px rgba(0,0,0,0.18);
         overflow: hidden;
         flex-direction: column;
         z-index: 1000;
+        font-size: 0.95rem;
+        transition: transform 0.3s ease, opacity 0.3s ease;
       }
 
-      /* Match header color */
+      .chatbox.show {
+        display: flex;
+      }
+
       .chat-header {
-        background: #2a7a3b;   /* SAME color as your site header */
+        background: #0f5132;
         color: white;
-        padding: 10px;
-        text-align: center;
-        font-weight: bold;
+        padding: 12px 16px;
+        font-weight: 600;
+        font-size: 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 6px;
-      }
-
-      .chat-header img {
-        width: 22px;
-        height: 22px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
       }
 
       .chat-messages {
-        padding: 10px;
-        height: 300px;
+        flex: 1;
+        padding: 12px;
         overflow-y: auto;
+        background: #f5fff6;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .chat-msg {
+        max-width: 85%;
+        padding: 8px 12px;
+        border-radius: 12px;
+        line-height: 1.3;
+      }
+
+      .chat-msg.bot {
+        background: #e0f3e5;
+        align-self: flex-start;
+        color: #0b2e13;
+      }
+
+      .chat-msg.user {
+        background: #0f5132;
+        color: white;
+        align-self: flex-end;
       }
 
       .chat-input {
         display: flex;
-        border-top: 1px solid #ddd;
+        border-top: 1px solid #e0e0e0;
+        padding: 8px 10px;
+        background: #fafdf7;
       }
 
       .chat-input input {
         flex: 1;
-        padding: 10px;
-        border: none;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
         outline: none;
+        font-size: 0.95rem;
       }
 
       .chat-input button {
-        padding: 10px;
-        background: #2a7a3b;
-        color: white;
+        margin-left: 8px;
+        padding: 10px 14px;
+        border-radius: 10px;
         border: none;
+        background: #0f5132;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s ease;
       }
 
-      /* Floating chat bubble */
+      .chat-input button:hover {
+        background: #0d4328;
+      }
+
+      /* ---------------- Floating Chat Button ---------------- */
       #chat-toggle-btn {
         position: fixed;
         right: 20px;
         bottom: 20px;
-        width: 55px;
-        height: 55px;
-        background: #2a7a3b;  /* same green */
+        width: 60px;
+        height: 60px;
+        background: #0f5132;
         color: white;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 24px;
+        font-size: 26px;
         cursor: pointer;
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
         z-index: 1001;
       }
-    </style>
 
+      #chat-toggle-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 24px rgba(0,0,0,0.3);
+      }
+
+    </style>
   </head>
 
   <body>
-    <header class="site-header" style="background:#2a7a3b; color:white; padding:20px;">
-      <h1>EcoLearn</h1>
+    <header class="site-header">
+      <a href="/" class="header-link">EcoLearn</a>
     </header>
-
+    
     <main class="container">
       {% block content %}{% endblock %}
     </main>
@@ -100,14 +291,11 @@
     <!-- CHATBOX -->
     <aside class="chatbox" id="chatbox">
       <div class="chat-header">
-        <!-- SIMPLE LOGO HERE -->
         🌿 EcoBot
       </div>
-
       <div class="chat-messages" id="chat-messages"></div>
-
       <div class="chat-input">
-        <input id="chat-input" placeholder="Type a question" />
+        <input id="chat-input" placeholder="Ask me anything..." />
         <button id="chat-send">Send</button>
       </div>
     </aside>
@@ -120,8 +308,7 @@
       const toggleBtn = document.getElementById("chat-toggle-btn");
 
       toggleBtn.addEventListener("click", () => {
-        chatbox.style.display =
-          chatbox.style.display === "none" ? "flex" : "none";
+        chatbox.classList.toggle("show");
       });
     </script>
 

@@ -47,27 +47,45 @@ def submit_quiz(lesson_id):
             feedback.append({'id': qid, 'correct': False, 'correct_answer': correct})
     return jsonify({'score': score, 'total': total, 'feedback': feedback})
 
-# Simple chatbot endpoint (rule-based)
+# Enhanced chatbot endpoint with suggested questions
 @app.route('/chat', methods=['POST'])
 def chat():
     data = request.json
     q = data.get('message','').lower()
-    # Simple rules
-    if any(w in q for w in ['climate', 'change', 'global warming']):
-        resp = "Climate change is the long-term shift in average weather patterns. Want a short definition or examples?"
-    elif any(w in q for w in ['mitigation', 'reduce', 'reduce emissions']):
-        resp = "Mitigation means reducing greenhouse gases — e.g., using renewable energy, improving energy efficiency."
-    elif any(w in q for w in ['adapt', 'adaptation']):
-        resp = "Adaptation are actions to adjust to the effects of climate change — like building flood defenses."
-    elif 'quiz' in q:
-        resp = "Each lesson has a short quiz — go to a lesson page and click 'Take Quiz'."
-    elif 'hello' in q or 'hi' in q:
-        resp = "Hi! I'm EcoBot — ask me about climate topics or the lessons."
-    else:
-        resp = "Sorry, I don't understand that yet. Try asking about causes, effects, mitigation, or quizzes."
-    return jsonify({'reply': resp})
 
-# Serve static files (for completeness)
+    # Default suggestions for user
+    suggestions = ['Climate change', 'Causes', 'Effects', 'Mitigation', 'Adaptation', 'Quiz']
+
+    # Simple rule-based responses
+    if any(w in q for w in ['climate', 'change', 'global warming']):
+        resp = ("Climate change refers to long-term shifts in temperatures and weather patterns, "
+                "caused by natural processes and human activities.")
+    elif any(w in q for w in ['greenhouse', 'co2', 'methane']):
+        resp = ("Greenhouse gases like CO2 and methane trap heat in the atmosphere, causing warming.")
+    elif any(w in q for w in ['causes', 'reason', 'why']):
+        resp = ("Major human causes of global warming include burning fossil fuels, deforestation, "
+                "and intensive agriculture.")
+    elif any(w in q for w in ['effects', 'impact', 'consequence']):
+        resp = ("Effects include rising sea levels, stronger storms, heatwaves, and threats to food supply.")
+    elif any(w in q for w in ['mitigation', 'reduce', 'reduce emissions']):
+        resp = ("Mitigation means reducing greenhouse gases — e.g., using renewable energy, "
+                "planting trees, and improving energy efficiency.")
+    elif any(w in q for w in ['adapt', 'adaptation']):
+        resp = ("Adaptation means adjusting to the impacts of climate change — "
+                "like building flood defenses, early warning systems, and diversifying crops.")
+    elif 'quiz' in q:
+        resp = ("Each lesson has a short quiz — go to a lesson page and click 'Take Quiz'.")
+    elif 'hello' in q or 'hi' in q:
+        resp = "Hi! I'm EcoBot — your climate guide."
+    elif any(w in q for w in ['thanks', 'thank you']):
+        resp = "You're welcome! I'm here to help with climate topics and lessons."
+    else:
+        resp = "Sorry, I don't understand that yet."
+
+    # Return reply + suggestions for frontend
+    return jsonify({'reply': resp, 'suggestions': suggestions})
+
+# Serve static files
 @app.route('/static/<path:path>')
 def static_proxy(path):
     return send_from_directory(os.path.join(app.root_path, 'static'), path)

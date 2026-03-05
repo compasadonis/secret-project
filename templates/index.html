@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-  <section>
-    <h2>Lessons</h2>
-    <div class="lessons-grid">
-      {% for l in lessons %}
-      <article class="lesson-card">
+<section>
+  <h2>Lessons</h2>
+  <div class="lessons-grid">
+    {% for l in lessons %}
+    <article class="lesson-card">
+      <div class="lesson-info">
         <h3>{{ l.title }}</h3>
         <p>{{ l.summary }}</p>
-        <div class="tags">
-        </div>
-        <div class="actions">
-          <a class="btn" href="/lesson/{{ l.id }}">Open Lesson</a>
-          <a class="btn-outline" href="/quiz/{{ l.id }}">Take Quiz</a>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
+      </div>
+      <div class="actions">
+        <a class="btn" href="/lesson/{{ l.id }}">Open Lesson</a>
+        <a class="btn-outline" href="/quiz/{{ l.id }}">Take Quiz</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
 {% endblock %}

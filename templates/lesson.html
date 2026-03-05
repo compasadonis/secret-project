@@ -1,23 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
-  <article class="lesson-full">
+<article class="lesson-full">
+  <header>
     <h2>{{ lesson.title }}</h2>
     <p class="meta">Estimated time: {{ lesson.duration }}</p>
-    {% for section in lesson.content %}
-      <section class="lesson-section">
-        <h3>{{ section.heading }}</h3>
-        <p>{{ section.text }}</p>
-        {% if section.activity %}
-          <div class="activity">
-            <strong>Activity:</strong>
-            <p>{{ section.activity }}</p>
-          </div>
-        {% endif %}
-      </section>
-    {% endfor %}
-    <div class="lesson-actions">
-      <a class="btn-outline" href="/quiz/{{ lesson.id }}">Take Quiz</a>
-      <a class="btn" href="/">Back to Lessons</a>
+  </header>
+
+  {% for section in lesson.content %}
+  <section class="lesson-section">
+    <h3>{{ section.heading }}</h3>
+    <p>{{ section.text }}</p>
+
+    {% if section.activity %}
+    <div class="activity">
+      <strong>Activity:</strong>
+      <p>{{ section.activity }}</p>
     </div>
-  </article>
+    {% endif %}
+  </section>
+  {% endfor %}
+
+  <div class="lesson-actions">
+    <a class="btn-outline" href="/quiz/{{ lesson.id }}">Take Quiz</a>
+    <a class="btn" href="/">Back to Lessons</a>
+  </div>
+</article>
 {% endblock %}

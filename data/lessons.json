@@ -3,124 +3,325 @@
     "id": "climate-basics",
     "title": "Climate Change Basics",
     "summary": "What climate change is, greenhouse gases, and why it matters.",
-    "duration": "10 min",
+    "duration": "25 min",
     "content": [
       {
         "heading": "What is climate change?",
-        "text": "Climate change refers to long-term shifts in temperatures and weather patterns. It can be caused naturally and by human activities.",
-        "activity": "List two local examples of weather changes you noticed."
+        "text": "Climate change refers to long-term shifts in temperatures and weather patterns. It can be caused naturally, like volcanic eruptions or solar changes, and by human activities, such as burning fossil fuels.",
+        "activity": "List two local examples of weather changes you noticed over the past five years."
       },
       {
         "heading": "Greenhouse gases",
-        "text": "Gases like CO2 and methane trap heat in the atmosphere, causing warming.",
-        "activity": "Think of three sources of CO2 in daily life."
+        "text": "Gases like carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O) trap heat in the atmosphere, causing global warming.",
+        "activity": "Think of three sources of CO2 or methane in your daily life."
+      },
+      {
+        "heading": "Effects of climate change",
+        "text": "Climate change can lead to rising sea levels, more frequent heatwaves, stronger storms, and changes in rainfall patterns, affecting humans, animals, and ecosystems.",
+        "activity": "Identify one effect of climate change you have personally observed or heard about in your area."
+      },
+      {
+        "heading": "Human contribution",
+        "text": "Human activities like deforestation, burning coal, oil, and gas, and intensive agriculture significantly increase greenhouse gas levels.",
+        "activity": "Suggest one action you or your community can take to reduce greenhouse gas emissions."
+      },
+      {
+        "heading": "Why climate change matters",
+        "text": "Climate change threatens food security, water supply, health, and biodiversity. Taking action now can reduce long-term damage.",
+        "activity": "Discuss why taking action on climate change is important for future generations."
       }
     ],
     "quiz": [
       {
         "id": 1,
         "question": "Which gas is the primary contributor to human-caused warming?",
-        "options": [
-          "Oxygen",
-          "Carbon dioxide",
-          "Nitrogen",
-          "Argon"
-        ],
+        "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Argon"],
         "answer": "Carbon dioxide"
       },
       {
         "id": 2,
         "question": "True or False: Climate change only refers to short-term weather events.",
+        "options": ["True", "False"],
+        "answer": "False"
+      },
+      {
+        "id": 3,
+        "question": "Which human activity contributes most to greenhouse gas emissions?",
         "options": [
-          "True",
-          "False"
+          "Driving cars and using electricity from fossil fuels",
+          "Planting trees",
+          "Cycling or walking",
+          "Fishing"
         ],
+        "answer": "Driving cars and using electricity from fossil fuels"
+      },
+      {
+        "id": 4,
+        "question": "What is one effect of climate change?",
+        "options": [
+          "Increased rainfall everywhere",
+          "Stronger storms and heatwaves",
+          "Lowering of global CO2 levels",
+          "More oxygen in the air"
+        ],
+        "answer": "Stronger storms and heatwaves"
+      },
+      {
+        "id": 5,
+        "question": "True or False: Taking individual actions cannot help reduce climate change.",
+        "options": ["True", "False"],
+        "answer": "False"
+      },
+      {
+        "id": 6,
+        "question": "Which of these is a greenhouse gas?",
+        "options": ["Methane", "Helium", "Hydrogen", "Neon"],
+        "answer": "Methane"
+      },
+      {
+        "id": 7,
+        "question": "Deforestation contributes to climate change because it:",
+        "options": [
+          "Removes CO2-absorbing trees",
+          "Produces oxygen",
+          "Increases rainfall",
+          "Reduces sunlight"
+        ],
+        "answer": "Removes CO2-absorbing trees"
+      },
+      {
+        "id": 8,
+        "question": "Rising global temperatures can lead to:",
+        "options": [
+          "Sea level rise",
+          "Lower global population",
+          "Stronger magnetic fields",
+          "Decrease in sunlight"
+        ],
+        "answer": "Sea level rise"
+      },
+      {
+        "id": 9,
+        "question": "Which of the following human actions reduces greenhouse gas emissions?",
+        "options": [
+          "Using renewable energy sources",
+          "Burning more coal",
+          "Deforestation",
+          "Using private cars for short trips"
+        ],
+        "answer": "Using renewable energy sources"
+      },
+      {
+        "id": 10,
+        "question": "True or False: Climate change affects only humans, not animals or ecosystems.",
+        "options": ["True", "False"],
         "answer": "False"
       }
     ]
   },
-  {
-    "id": "causes-effects",
-    "title": "Causes & Effects of Global Warming",
-    "summary": "Human and natural drivers, and impacts on people and ecosystems.",
-    "duration": "12 min",
-    "content": [
+    {
+      "id": "causes-effects",
+      "title": "Causes & Effects of Global Warming",
+      "summary": "Human and natural drivers, and impacts on people and ecosystems.",
+      "duration": "20 min",
+      "content": [
+        {
+          "heading": "Causes",
+          "text": "Burning fossil fuels, deforestation, and intensive agriculture increase greenhouse gases like CO2 and methane. Natural factors like volcanic eruptions and solar variations also play a role, but human activities are the main driver of recent warming.",
+          "activity": "Identify a local example of deforestation or other human activity that contributes to global warming."
+        },
+        {
+          "heading": "Effects on climate",
+          "text": "Global warming causes rising temperatures, changing rainfall patterns, stronger storms, and longer heatwaves.",
+          "activity": "Describe a recent weather event you experienced that could be linked to climate change."
+        },
+        {
+          "heading": "Effects on ecosystems",
+          "text": "Wildlife habitats are affected, some species face extinction, coral reefs bleach, and forests may degrade.",
+          "activity": "Name an animal or plant in your area that could be affected by climate change."
+        },
+        {
+          "heading": "Effects on humans",
+          "text": "Communities face food and water insecurity, health risks, and economic impacts from natural disasters.",
+          "activity": "Suggest one way your community could adapt to these changes."
+        },
+        {
+          "heading": "Mitigation strategies",
+          "text": "Reducing fossil fuel use, planting trees, adopting renewable energy, and promoting sustainable agriculture can slow global warming.",
+          "activity": "List one action you can take to reduce your carbon footprint."
+        }
+      ],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "Which activity increases atmospheric CO2?",
+          "options": ["Photosynthesis", "Burning coal", "Rainfall", "Erosion"],
+          "answer": "Burning coal"
+        },
+        {
+          "id": 2,
+          "question": "Which is a likely effect of global warming?",
+          "options": ["Lower sea levels", "More frequent heatwaves", "Decreased temperatures", "Less extreme weather"],
+          "answer": "More frequent heatwaves"
+        },
+        {
+          "id": 3,
+          "question": "Which gas is a major contributor to global warming?",
+          "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Helium"],
+          "answer": "Carbon dioxide"
+        },
+        {
+          "id": 4,
+          "question": "True or False: Human activities are the main cause of recent global warming.",
+          "options": ["True", "False"],
+          "answer": "True"
+        },
+        {
+          "id": 5,
+          "question": "Deforestation contributes to global warming by:",
+          "options": [
+            "Reducing CO2 absorption",
+            "Increasing oxygen levels",
+            "Cooling the Earth",
+            "Reducing methane emissions"
+          ],
+          "answer": "Reducing CO2 absorption"
+        },
+        {
+          "id": 6,
+          "question": "Which of these is a direct effect of global warming on oceans?",
+          "options": ["Rising sea levels", "Lower temperatures", "Decreased salinity", "Reduced CO2"],
+          "answer": "Rising sea levels"
+        },
+        {
+          "id": 7,
+          "question": "Global warming can affect food security by:",
+          "options": [
+            "Increasing crop yields everywhere",
+            "Changing rainfall and temperature patterns",
+            "Making water more available",
+            "Reducing pests naturally"
+          ],
+          "answer": "Changing rainfall and temperature patterns"
+        },
+        {
+          "id": 8,
+          "question": "Which renewable energy source helps mitigate global warming?",
+          "options": ["Coal", "Oil", "Solar power", "Natural gas"],
+          "answer": "Solar power"
+        },
+        {
+          "id": 9,
+          "question": "True or False: Only natural factors, not humans, cause global warming.",
+          "options": ["True", "False"],
+          "answer": "False"
+        },
+        {
+          "id": 10,
+          "question": "Which action can help reduce global warming?",
+          "options": [
+            "Planting trees",
+            "Burning more fossil fuels",
+            "Deforestation",
+            "Using more plastic"
+          ],
+          "answer": "Planting trees"
+        }
+      ]
+    },  
       {
-        "heading": "Causes",
-        "text": "Burning fossil fuels, deforestation, and intensive agriculture increase greenhouse gases.",
-        "activity": "Identify a local example of deforestation."
-      },
-      {
-        "heading": "Effects",
-        "text": "Sea level rise, stronger storms, heatwaves, and impacts on food supply.",
-        "activity": "Describe a way local communities can adapt."
-      }
-    ],
-    "quiz": [
-      {
-        "id": 1,
-        "question": "Which activity increases atmospheric CO2?",
-        "options": [
-          "Photosynthesis",
-          "Burning coal",
-          "Rainfall",
-          "Erosion"
+        "id": "mitigation-adaptation",
+        "title": "Mitigation & Adaptation",
+        "summary": "Actions to reduce emissions (mitigation) and adjust to impacts (adaptation).",
+        "duration": "25 min",
+        "content": [
+          {
+            "heading": "Mitigation",
+            "text": "Mitigation involves policies, technologies, and practices that reduce greenhouse gas emissions. Examples include using renewable energy, improving energy efficiency, reducing waste, and planting trees.",
+            "activity": "List one action your household can take to mitigate emissions, such as using energy-efficient appliances."
+          },
+          {
+            "heading": "Adaptation",
+            "text": "Adaptation is about adjusting to climate impacts and building resilience. Examples include flood defenses, early warning systems, drought-resistant crops, and coastal protection measures.",
+            "activity": "Think of a local adaptation measure that your community uses to cope with climate change."
+          },
+          {
+            "heading": "Individual actions",
+            "text": "Individuals can contribute through sustainable transportation, reducing meat consumption, conserving energy, and supporting clean energy policies.",
+            "activity": "Identify one habit you can change to reduce your carbon footprint."
+          },
+          {
+            "heading": "Community initiatives",
+            "text": "Communities can engage in tree planting, waste management programs, water conservation, and climate education campaigns.",
+            "activity": "Suggest one community-level project that could help mitigate or adapt to climate change."
+          },
+          {
+            "heading": "Policy & technology",
+            "text": "Governments and organizations can adopt renewable energy, carbon pricing, green building codes, and disaster management systems to address climate change.",
+            "activity": "Name one policy or technology that could help your city or barangay become more climate-resilient."
+          }
         ],
-        "answer": "Burning coal"
-      },
-      {
-        "id": 2,
-        "question": "Which is a likely effect of global warming?",
-        "options": [
-          "Lower sea levels",
-          "More frequent heatwaves",
-          "Decreased temperatures",
-          "Less extreme weather"
-        ],
-        "answer": "More frequent heatwaves"
+        "quiz": [
+          {
+            "id": 1,
+            "question": "Which is a mitigation action?",
+            "options": ["Building a sea wall", "Planting mangroves", "Switching to solar power", "None of the above"],
+            "answer": "Switching to solar power"
+          },
+          {
+            "id": 2,
+            "question": "Adaptation aims to:",
+            "options": ["Prevent climate change entirely", "Adjust to climate impacts", "Increase emissions", "Stop all weather"],
+            "answer": "Adjust to climate impacts"
+          },
+          {
+            "id": 3,
+            "question": "Which of the following is an example of individual mitigation?",
+            "options": ["Cycling instead of driving", "Building flood barriers", "Planting mangroves", "Installing a weather station"],
+            "answer": "Cycling instead of driving"
+          },
+          {
+            "id": 4,
+            "question": "True or False: Adaptation measures can help reduce damage from climate events.",
+            "options": ["True", "False"],
+            "answer": "True"
+          },
+          {
+            "id": 5,
+            "question": "Community tree planting is an example of:",
+            "options": ["Mitigation", "Adaptation", "Both", "None"],
+            "answer": "Both"
+          },
+          {
+            "id": 6,
+            "question": "Using drought-resistant crops is a form of:",
+            "options": ["Mitigation", "Adaptation", "Prevention", "Reforestation"],
+            "answer": "Adaptation"
+          },
+          {
+            "id": 7,
+            "question": "Installing solar panels contributes to:",
+            "options": ["Reducing greenhouse gases", "Increasing flood risks", "Higher electricity bills", "Deforestation"],
+            "answer": "Reducing greenhouse gases"
+          },
+          {
+            "id": 8,
+            "question": "True or False: Mitigation prevents climate change effects entirely.",
+            "options": ["True", "False"],
+            "answer": "False"
+          },
+          {
+            "id": 9,
+            "question": "Which of the following helps a community adapt to floods?",
+            "options": ["Constructing drainage systems", "Driving less", "Reducing meat consumption", "Switching to LED bulbs"],
+            "answer": "Constructing drainage systems"
+          },
+          {
+            "id": 10,
+            "question": "Which action contributes to both mitigation and adaptation?",
+            "options": ["Planting trees", "Burning coal", "Using plastic bags", "Driving more cars"],
+            "answer": "Planting trees"
+          }
+        ]
       }
-    ]
-  },
-  {
-    "id": "mitigation-adaptation",
-    "title": "Mitigation & Adaptation",
-    "summary": "Actions to reduce emissions (mitigation) and adjust to impacts (adaptation).",
-    "duration": "15 min",
-    "content": [
-      {
-        "heading": "Mitigation",
-        "text": "Policies and technologies to reduce greenhouse gas emissions such as renewables and energy efficiency.",
-        "activity": "List one action your household can take to mitigate emissions."
-      },
-      {
-        "heading": "Adaptation",
-        "text": "Building resilience: flood defenses, early warning systems, and crop diversification.",
-        "activity": "Think of a local adaptation measure."
-      }
-    ],
-    "quiz": [
-      {
-        "id": 1,
-        "question": "Which is a mitigation action?",
-        "options": [
-          "Building a sea wall",
-          "Planting mangroves",
-          "Switching to solar power",
-          "None of the above"
-        ],
-        "answer": "Switching to solar power"
-      },
-      {
-        "id": 2,
-        "question": "Adaptation aims to:",
-        "options": [
-          "Prevent climate change entirely",
-          "Adjust to climate impacts",
-          "Increase emissions",
-          "Stop all weather"
-        ],
-        "answer": "Adjust to climate impacts"
-      }
-    ]
-  }
-]
+    ]    
